@@ -27,7 +27,7 @@ LIMIT 3;
 TASK_3_QUERY = """
 SELECT COUNT(*) AS count
 FROM flights f
-JOIN airports a_dep ON f.departure_airport = a_dep.airport_code
-JOIN airports a_arr ON f.arrival_airport = a_arr.airport_code
+JOIN airports_data a_dep ON f.departure_airport = a_dep.airport_code
+JOIN airports_data a_arr ON f.arrival_airport = a_arr.airport_code
 WHERE a_dep.timezone = a_arr.timezone;
 """
